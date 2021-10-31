@@ -97,7 +97,7 @@ export default {
   methods: {
     async onSubmit() {
       try {
-        await axios({ method: 'post', url: 'http://localhost:1337/contacts', data: this.form })
+        await axios({ method: 'post', url: GRIDSOME_API_URL, data: this.form })
         window.alert('发送成功')
       } catch (error) {
         window.alert('发送失败，请稍后重试')
